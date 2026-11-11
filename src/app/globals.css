@@ -115,3 +115,29 @@ html.lenis body {
 .lenis [data-lenis-prevent] {
   overscroll-behavior: contain;
 }
+
+@keyframes caer {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(300%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+/* Líneas de SplitText: aire arriba para que la máscara no corte tildes ni la Ñ */
+.linea {
+  padding-top: 0.16em;
+}
+.linea-mask {
+  margin-top: -0.16em;
+}

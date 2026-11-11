@@ -33,6 +33,7 @@ export function SplitHeading({
       SplitText.create(el, {
         type: "lines",
         mask: "lines",
+        linesClass: "linea",
         autoSplit: true,
         onSplit: (split) =>
           gsap.from(split.lines, {
