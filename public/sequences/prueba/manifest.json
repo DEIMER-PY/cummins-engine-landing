@@ -1,0 +1,19 @@
+{
+  "name": "prueba",
+  "fps": 24,
+  "pad": 4,
+  "ext": "webp",
+  "count": 96,
+  "variants": {
+    "desktop": {
+      "width": 1600,
+      "height": 900,
+      "bytes": 948238
+    },
+    "mobile": {
+      "width": 900,
+      "height": 506,
+      "bytes": 400938
+    }
+  }
+}
