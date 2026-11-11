@@ -12,13 +12,13 @@
 
 Formato: `<emoji> <tipo>(<ámbito>): <descripción>` — por ejemplo `✨ feat(hero): add engine orbit sequence`.
 
-| Emoji | Tipo | Cuándo |
-|-------|------|--------|
-| ✨ | `feat` | Funcionalidad nueva |
-| 🐛 | `fix` | Corrección |
-| 📝 | `docs` | Documentación |
-| 🔧 | `chore` | Configuración y mantenimiento |
-| ♻️ | `refactor` | Cambio interno sin efecto visible |
-| ⚡ | `perf` | Rendimiento |
-| 💄 | `style` | Ajustes visuales |
-| 🍱 | `chore(assets)` | Imágenes, frames y vídeo |
+| Emoji | Tipo            | Cuándo                            |
+| ----- | --------------- | --------------------------------- |
+| ✨    | `feat`          | Funcionalidad nueva               |
+| 🐛    | `fix`           | Corrección                        |
+| 📝    | `docs`          | Documentación                     |
+| 🔧    | `chore`         | Configuración y mantenimiento     |
+| ♻️    | `refactor`      | Cambio interno sin efecto visible |
+| ⚡    | `perf`          | Rendimiento                       |
+| 💄    | `style`         | Ajustes visuales                  |
+| 🍱    | `chore(assets)` | Imágenes, frames y vídeo          |
