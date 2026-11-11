@@ -43,3 +43,6 @@ next-env.d.ts
 # originales de generación (keyframes y mp4 sin procesar); ver docs/asset-pipeline.md
 /assets-src/*
 !/assets-src/.gitkeep
+
+# capturas de verificación
+/.playwright-mcp/

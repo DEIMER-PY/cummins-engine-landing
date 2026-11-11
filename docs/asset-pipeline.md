@@ -14,12 +14,12 @@ Gemini (keyframe)  →  Gemini/Veo (clip 8 s)  →  ffmpeg (frames WebP)  →  p
    pnpm frames assets-src/hero.mp4 hero --fps 24 --crop 0.04
    ```
 
-   | Opción | Por defecto | Para qué |
-   |--------|-------------|----------|
-   | `--fps` | 24 | Frames por segundo extraídos |
-   | `--crop` | 0 | Fracción recortada por borde (marca de agua, bordes sucios) |
-   | `--from` / `--to` | clip completo | Tramo en segundos |
-   | `--q` | 74 | Calidad WebP |
+   | Opción            | Por defecto   | Para qué                                                    |
+   | ----------------- | ------------- | ----------------------------------------------------------- |
+   | `--fps`           | 24            | Frames por segundo extraídos                                |
+   | `--crop`          | 0             | Fracción recortada por borde (marca de agua, bordes sucios) |
+   | `--from` / `--to` | clip completo | Tramo en segundos                                           |
+   | `--q`             | 74            | Calidad WebP                                                |
 
    Resultado: `desktop/` (1600 px) y `mobile/` (900 px) con `0001.webp…` y un `manifest.json`
    (`count`, `pad`, dimensiones y peso por variante) que consume el cargador del cliente.
