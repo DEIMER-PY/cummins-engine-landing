@@ -35,3 +35,13 @@ Carácter: masa e inercia. Sin rebotes ni elásticos.
 
 Con `prefers-reduced-motion: reduce` no se instancia Lenis, no hay pins ni splits y las
 secuencias muestran un keyframe fijo. El contenido es legible sin JavaScript.
+
+## Lecciones aprendidas
+
+- **Nada de animaciones creadas en un `.then()`**: quedan fuera del contexto de `useGSAP`, no se
+  limpian y en desarrollo (StrictMode) se duplican los pins. El timeline se crea de forma
+  síncrona animando un progreso 0–1 y los datos asíncronos (número de frames) se leen en `onUpdate`.
+- **Refrescar tras desbloquear el scroll**: con `overflow: hidden` el documento no tiene recorrido
+  y los triggers creados en ese momento miden mal. El preloader llama a `ScrollTrigger.refresh()`.
+- **Máscaras de SplitText**: las líneas usan la clase `linea` (aire superior) para no cortar
+  tildes ni la Ñ con interlineados apretados.
