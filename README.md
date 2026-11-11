@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Cummins QSK60 — landing cinematográfica
 
-## Getting Started
+Recorrido interactivo por un motor diésel de minería, controlado por scroll: secuencias de
+frames sobre canvas WebGL, GSAP ScrollTrigger y scroll suave con Lenis.
 
-First, run the development server:
+> Proyecto conceptual de pruebas, **no oficial** y sin relación con Cummins Inc.
+
+## Stack
+
+| Capa      | Herramienta                                                      |
+| --------- | ---------------------------------------------------------------- |
+| Framework | Next.js 16 (App Router, export estático) + React 19 + TypeScript |
+| Estilos   | Tailwind CSS v4 (tokens en `src/app/globals.css`)                |
+| Animación | GSAP 3 (ScrollTrigger, SplitText) + `@gsap/react`                |
+| Scroll    | Lenis, sincronizado con el ticker de GSAP                        |
+| Render    | WebGL2 propio (sin Three.js) con fallback a Canvas 2D            |
+| Assets    | Keyframes y clips generados con Gemini → frames WebP con ffmpeg  |
+
+## Puesta en marcha
+
+Requisitos: Node 20+, pnpm, y ffmpeg solo si vas a regenerar frames.
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm install
+pnpm dev        # http://localhost:3000
+pnpm build      # genera ./out (estático)
+pnpm preview    # sirve ./out
+pnpm lint
+pnpm format
+pnpm frames     # mp4 de assets-src/ → public/sequences/ (ver docs/asset-pipeline.md)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Documentación
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- [Arquitectura](docs/architecture.md)
+- [Sistema de diseño](docs/design-system.md)
+- [Sistema de motion](docs/motion-system.md)
+- [Pipeline de assets](docs/asset-pipeline.md)
+- [Prompts de generación](docs/prompts.md)
+- [Flujo de trabajo y convenciones](docs/contributing.md)
